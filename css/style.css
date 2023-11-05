@@ -755,7 +755,9 @@ footer .chamada-footer .whatsapp span{
     }
 }
 
-@media screen and (max-width: 768px){
+
+
+@media screen and (max-width: 840px){
 
     .modal form,.modal-2 form{
         width: 45%;
@@ -935,7 +937,7 @@ footer .chamada-footer .whatsapp span{
     /**/
 
     section.sobre{
-        margin-top: 60px;
+        margin: 60px 0;
     }
 
     section.sobre > .container{
@@ -995,7 +997,7 @@ footer .chamada-footer .whatsapp span{
 
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 450px){
 
     .modal form,.modal-2 form{
         width: 70%;
@@ -1013,12 +1015,16 @@ footer .chamada-footer .whatsapp span{
         font-size: 14px;
     }
 
+    section.cursos-destaque .container h2 {
+        font-size: 26px;
+    }
+
     section.cursos-destaque .cursos-container .curso-single .texto p {
         font-size: 18px;
     }
 
     section.cursos-destaque .curso-single .stars {
-        width: 38%;
+        width: 42%;
     }
 
     section.sobre > .container > .parte2{
@@ -1032,7 +1038,7 @@ footer .chamada-footer .whatsapp span{
     /**/
 
     section.professores{
-        padding: 30px 0;
+        padding: 30px 0 0 0;
     }
 
     section.professores > h2{
@@ -1045,17 +1051,29 @@ footer .chamada-footer .whatsapp span{
     }
 
     /**/
+    footer .parte1{
+        padding-top: 0;
+    }
+
+    footer .parte2{
+        padding-top: 35%;
+    }
+
+    footer .chamada-footer{
+        gap: 20px;
+        flex-direction: column;
+    }
 
     footer .chamada-footer .texto{
-        width: 62%;
+        width: 100%;
     }
 
     footer .chamada-footer .texto h2{
-        font-size: 17px;
+        font-size: 22px;
     }
 
     footer .chamada-footer .texto p{
-        font-size: 12px;
+        font-size: 13px;
     }
 
     footer .chamada-footer .whatsapp{
@@ -1063,11 +1081,11 @@ footer .chamada-footer .whatsapp span{
     }
 
     footer .chamada-footer .whatsapp span {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 390px){
 
     .modal form,.modal-2 form{
         width: 80%;
@@ -1099,25 +1117,36 @@ footer .chamada-footer .whatsapp span{
 
     /**/
 
-    section.cursos-destaque .container h2 {
-        font-size: 28px;
+    section.cursos-destaque{
+        margin-top: 15vw;
     }
 
+    section.cursos-destaque .container h2 {
+        font-size: 26px;
+    }
+
+    section.cursos-destaque .cursos-container .curso-single .texto p{
+        font-size: 15px;
+    }
+
+    section.cursos-destaque .curso-single .texto2 span{
+        font-size: 15px;
+    }
     /**/
 
     section.sobre{
-        margin-top: 15px;
+        margin: 20px 0 0 0;
     }
 
-    /**/
-    
     section.sobre .parte2 h2{
-        font-size: 22px;
+        font-size: 24px;
     }
 
     section.sobre .parte2 p{
-        font-size: 10px;
+        font-size: 12px;
     }
+
+    /**/
 
     section.professores .professor-single{
         width: 88%;
