@@ -1,0 +1,1125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --blue:#4A86D4;
+    --buttonBlue:#3179D7;
+    --bodyColor: #E0E0E0;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+html,body{
+    height: 100%;
+    background-color: var(--bodyColor);
+}
+
+
+/*   Start Header   */
+header{
+    width: 100%;
+    padding: 14px 0;
+    box-shadow: 1px -4px 20px 6px rgba(96,96,96,0.76);
+    -webkit-box-shadow: 1px -4px 20px 6px rgba(96,96,96,0.76);
+    -moz-box-shadow: 1px -4px 20px 6px rgba(96,96,96,0.76);
+}
+
+header > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img{
+    width: 165px;
+    height: 65px;
+}
+
+/*      menu-desktop        */
+
+header nav.menu-desktop ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+}
+
+nav.menu-desktop ul li a{
+    color: black;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+
+nav.menu-desktop button{
+    border: 0;
+    color: white;
+    cursor: pointer;
+    padding: 5px 60px;
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    background-color: var(--buttonBlue);
+}
+
+/*      menu-mobile     */
+
+header nav.menu-mobile{
+    display: none;
+    width: 32px;
+    height: 32px;
+    justify-self: right;
+    background-image: url('../images/menu.png');
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+nav.menu-mobile ul{
+    width: 100%;
+    left: 0;
+    top: 100px;
+    z-index: 99;
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    background-color: var(--bodyColor);
+    box-shadow: -1px 3px 17px -1px rgba(0,0,0,0.49);
+    -webkit-box-shadow: -1px 3px 17px -1px rgba(0,0,0,0.49);
+    -moz-box-shadow: -1px 3px 17px -1px rgba(0,0,0,0.49);
+
+}
+
+nav.menu-mobile ul li{
+    padding: 15px 0;
+}
+
+nav.menu-mobile ul li a{
+    color: black;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+nav.menu-mobile button{
+    border: 0;
+    color: white;
+    cursor: pointer;
+    padding: 5px 60px;
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    background-color: var(--buttonBlue);
+}
+
+
+/*   End header   */
+
+/*  Start Modal login */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}
+
+.modal form{
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+    height: 280px;
+    text-align: center;
+    background-color: white;
+}
+
+.modal form .inputs{
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal form input{
+    width: 80%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #848282;
+}
+
+.modal form input[type=submit]{
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    font-family: lato;
+    font-weight: 600;
+    background-color: var(--buttonBlue);
+}
+/*  End Modal login  */
+
+/*  Start Modal register   */
+.modal-2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}
+
+.modal-2 form{
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+    height: 335px;
+    text-align: center;
+    background-color: white;
+}
+
+.modal-2 form .inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.modal-2 form input{
+    width: 80%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #848282;
+}
+
+.modal-2 form input[type=submit]{
+    overflow: hidden;
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    font-family: lato;
+    font-weight: 600;
+    background-color: var(--buttonBlue);
+}
+
+.closeBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--buttonBlue);
+    color: #fff;
+    font-size: 30px;
+    font-family: Lato;
+    font-weight: 400;
+    position: relative;
+    top: -20px;
+    left: 93%;
+}
+/*  End Modal register  */
+
+/*  Start Section Estude */
+
+section.estude{
+    width: 100%;
+    max-height: 700px;
+}
+
+section.estude > .container{
+    width: 100%;
+    position: relative;
+    top: -20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.estude .texto{
+    width: 55%;
+}
+
+section.estude .texto-single > span:nth-child(1){
+    color: white;
+    padding: 8px 10px;
+    margin-right: 10px;
+    background-color: #10B817;
+    font-family: 'Lato', sans-serif;
+}
+
+section.estude .texto-single > span:nth-child(2){
+    color: #10B817;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+section.estude .texto h2{
+    font-size: 64px;
+    margin-top: 10px;
+    font-family: 'Lato';
+}
+
+section.estude p{
+    margin: 20px 0;
+    color: #545252;
+    font-family: 'Lato';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+section.estude button{
+    border: 0;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Lato;
+    font-style: normal;
+    line-height: normal;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--buttonBlue);
+}
+
+section.estude button img{
+    position: relative;
+    top: 5px;
+    margin-left: 5px;
+}
+
+section.estude .woman{
+    width: 45%;
+}
+
+section.estude .woman img{
+    width: 100%;
+}
+
+/*   End Section.estude     */
+
+
+/*  Start section cursos-destaque  */
+
+section.cursos-destaque{
+    width: 100%;
+}
+
+section.cursos-destaque > .container{
+    gap: 5vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+section.cursos-destaque .container .bg{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    background-color: #4A86D4;
+}
+
+section.cursos-destaque .container h2{
+    margin: 0 auto;
+    color: #000;
+    font-family: Lato;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+section.cursos-destaque .cursos-container{
+    z-index: 20;
+    padding: 0 1%;
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.cursos-destaque .curso-single{
+    z-index: 2;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+}
+
+section.cursos-destaque .curso-single p{
+    color: #000;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+section.cursos-destaque .curso-single span:nth-of-type(1){
+    color: #000;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+section.cursos-destaque .curso-single .texto2{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.cursos-destaque .curso-single .stars{
+    width: 40%;
+    display: flex;
+}
+
+/* End section cursos-destaque */
+
+
+
+/*  Start section sobre */
+
+section.sobre{
+    width: 100%;
+    margin-top: 100px;
+}
+
+section.sobre .container{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-direction: row;
+}
+
+section.sobre .parte1{
+    width: 35%;
+}
+
+section.sobre .parte2{
+    width: 65%;
+    padding: 40px 2% 0 2%;
+}
+
+section.sobre .parte2 h2{
+    width: 70%;
+    margin-bottom: 15px;
+    color: #000;
+    font-family: Lato;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+section.sobre .parte2 p{
+    margin-bottom: 30px;
+    color: #545252;
+    font-family: Lato;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+section.sobre .parte2 button{
+    border: 0;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: Lato;
+    font-style: normal;
+    line-height: normal;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--buttonBlue);
+}
+
+/*  End Section Sobre   */
+
+
+
+/* Start section professores */
+
+    section.professores{
+        width: 100%;
+        padding: 100px 0;
+    }
+
+    section.professores .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.professores > h2{
+        color: #000;
+        font-family: Lato;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 50px;
+        text-align: center;
+    }
+
+    section.professores .professores-container{
+        width: 100%;
+        gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    section.professores .professor-single{
+        width: calc((100% / 4) - 30px);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        height: 460px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+    }
+
+    section.professores .professor-single span{
+        margin-bottom: 25px;
+        padding: 2px 35px;
+        background-color: white;
+        color: #000;
+        font-family: Lato;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    section.professores .container .texto{
+        padding: 30px;
+        text-align: justify;
+        color: #545252;
+        text-align: center;
+        font-family: Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+/* End section professores */
+
+/* Start footer */
+
+footer{
+    width: 100%;
+}
+
+footer .parte1{
+    width: 100%;
+    padding-top: 10%;
+}
+
+footer .parte2{
+    width: 100%;
+    background-color: var(--buttonBlue);
+    padding-top: 15%;
+}
+
+footer .chamada-footer{
+    z-index: 2;
+    position: relative;
+    left: 25%;
+    top: 65px;
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+footer .chamada-footer .texto{
+    width: 60%;
+    text-align: center;
+}
+
+footer .chamada-footer .texto h2{
+    color: #000;
+    font-family: Lato;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+footer .chamada-footer .texto p{
+    width: 60%;
+    margin: 0 auto;
+    color: #545252;
+    text-align: center;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer .chamada-footer .whatsapp{
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #10B817;
+}
+
+footer .chamada-footer .whatsapp span{
+    color: #FFF;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+/* End footer  */
+
+
+/*  Start Medias    */
+
+@media screen and (max-width: 1440px){
+
+    .modal form {
+        width: 25%;
+        gap: 20px;
+    }
+
+    .modal-2 form {
+        width: 25%;
+        gap: 20px;
+    }
+    .container{max-width: 1200px;}
+
+    section.sobre .parte1 img{
+       max-width: 450px;
+    }
+
+    section.sobre .parte2 h2{
+        font-size: 34px;
+    }
+    
+    section.sobre .parte2 p{
+        font-size: 14px;
+    }
+
+    section.sobre .parte2 button{
+        font-size: 20px;
+    }
+
+    section.professores .professores-container{
+        justify-content: center;
+    }
+
+    section.professores .professor-single{
+        width: calc((100% / 2) - 200px);
+    }
+
+    footer .chamada-footer{
+        left: 18%;
+        top: 80px;
+        width: 65%;
+        padding: 45px;
+    }
+
+    footer .chamada-footer .texto p{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .modal form,.modal-2 form{
+        width: 30%;
+    }
+
+    .container{max-width: 900px;}
+
+    header nav.menu-desktop{
+        gap: 30px;
+    }
+
+    header nav.menu-desktop li a{
+        font-size: 17px;
+    }
+
+    nav.menu-desktop li button{
+        font-size: 18px;
+        padding: 5px 48px;
+    }
+
+    section.estude > .container{
+        position: relative;
+        top: 80px;
+    }
+
+    section.cursos-destaque{
+        margin-top: 20vh;
+    }
+
+    section.cursos-destaque .container .bg{
+        height: 350px;
+        bottom: 22%;
+    }
+
+    section.cursos-destaque .curso-single{
+        width: 28%;
+    }
+
+    section.cursos-destaque .curso-single p{
+        font-size: 17px;
+    }
+
+    section.cursos-destaque .curso-single .stars{
+        width: 35%;
+        display: flex;
+    }
+
+    section.sobre .parte1 img{
+        max-width: 350px;
+    }
+
+    section.sobre .parte2 h2{
+        width: 100%;
+        margin-top: 20px;
+        font-size: 32px;
+    }
+
+    /**/
+
+    section.professores .professor-single{
+        width: calc((100% / 2) - 100px);
+    }
+    
+    footer .chamada-footer{
+        left: 8%;
+        top: 80px;
+        width: 86%;
+        padding: 45px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .modal form,.modal-2 form{
+        width: 45%;
+    }
+
+    .container{
+        padding: 0 5%;
+    }
+
+    nav.menu-desktop{display: none;}
+
+    header nav.menu-mobile{
+        display: block;
+    }
+
+    header nav.menu-mobile ul{
+        display: none;
+    }
+
+    /**/
+
+    section.estude{
+        margin-top: 80px;
+    }
+
+    section.estude .container{
+        position: static;
+    }
+
+    section.estude .texto-single h2{
+        font-size: 48px;
+    }
+
+    /**/
+
+    section.cursos-destaque{
+        margin-top: 5vh;
+    }
+
+    section.cursos-destaque > .container{
+        gap: 10vw;
+    }
+
+    section.cursos-destaque .container .bg{
+        height: 400px;
+        bottom: 33%;
+    }
+
+    section.cursos-destaque .container h2{
+        font-size: 32px;
+    }
+
+    section.cursos-destaque .container .curso-single{
+        width: 45%;
+        gap: 12px;
+    }
+
+    section.cursos-destaque .cursos-container .curso-single .texto p{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    section.cursos-destaque .curso-single .texto{
+        padding: 10px 0;
+    }
+
+    section.cursos-destaque .curso-single .texto2{
+        width: 75%;
+    }
+
+    section.cursos-destaque .curso-single .texto2 span{
+        font-size: 18px;
+    }
+
+    section.cursos-destaque .curso-single .stars{
+        width: 16%;
+    }
+
+    section.cursos-destaque .curso-single .stars img{
+        height: 19px;
+    }
+
+    /**/
+
+    section.sobre .parte2{
+        padding: 20px 2% 0 2%;
+    }
+
+    section.sobre .parte1 img{
+        max-width: 270px;
+    }
+
+    section.sobre .parte2 h2{
+        font-size: 32px;
+    }
+
+    section.sobre .parte2 p{
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    /**/
+
+    section.professores .professor-single{
+        width: calc((100% / 2) - 60px);
+    }
+
+    section.professores .container .texto{
+        font-size: 15px;
+    }
+
+    footer .chamada-footer{
+        width: 98%;
+        left: 1%;
+        padding: 45px 2%;
+    }
+
+    footer .chamada-footer .texto{
+        width: 67%;
+    }
+
+    footer .chamada-footer .texto h2{
+        font-size: 24px;
+    }
+
+    footer .chamada-footer .texto p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 580px){
+
+    .modal form,.modal-2 form{
+        width: 55%;
+    }
+
+    section.estude > .container > .woman{display: none;}
+
+    section.estude{
+        display: flex;
+    }
+
+    section.estude .container{
+        text-align: center;
+        justify-content: center;
+        align-items: end;
+    }
+
+    section.estude .container .texto{
+        width: 70%;
+    }
+
+    /**/
+
+    section.cursos-destaque{
+        margin-top: 20vw;
+    }
+
+    section.cursos-destaque .container .bg{display: none;}
+
+    section.cursos-destaque .container{
+        gap: 50px;
+    }
+
+    section.cursos-destaque .container .curso-single{
+        width: 80%;
+    }
+
+    section.cursos-destaque .curso-single .texto2{
+        width: 100%;
+    }
+
+    section.cursos-destaque .curso-single .stars {
+        width: 27%;
+    }
+
+    /**/
+
+    section.sobre{
+        margin-top: 60px;
+    }
+
+    section.sobre > .container{
+        display: block;
+        text-align: center;
+    }
+
+    section.sobre .parte1 img{
+        display: none;
+    }
+    
+    section.sobre > .container > .parte2{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /**/
+    
+    section.professores{
+        padding: 100px 0 20px 0;
+    }
+
+    section.professores > h2{
+        font-size: 38px;
+    }
+
+    section.professores .professor-single{
+        width: 65%;
+    }
+
+    /**/
+
+    footer .parte1{
+        padding-top: 5%;
+    }
+
+    footer .parte2{
+        padding-top: 30%;
+    }
+
+    footer .chamada-footer {
+        width: 96%;
+        left: 8px;
+    }
+
+    footer .chamada-footer .whatsapp{
+        padding: 5px 22px;
+    }
+
+    footer .chamada-footer .texto p{
+        width: 75%;
+    }
+
+    footer .chamada-footer .whatsapp span {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 425px){
+
+    .modal form,.modal-2 form{
+        width: 70%;
+    }
+
+    section.estude .container .texto{
+        width: 100%;
+    }
+
+    section.estude .container .texto-single h2{
+        font-size: 44px;
+    }
+
+    section.estude .texto-single > span:nth-child(2) {
+        font-size: 14px;
+    }
+
+    section.cursos-destaque .cursos-container .curso-single .texto p {
+        font-size: 18px;
+    }
+
+    section.cursos-destaque .curso-single .stars {
+        width: 38%;
+    }
+
+    section.sobre > .container > .parte2{
+        width: 100%;
+    }
+
+    section.sobre > .container > .parte2 h2{
+        font-size: 26px;
+    }
+
+    /**/
+
+    section.professores{
+        padding: 30px 0;
+    }
+
+    section.professores > h2{
+        font-size: 28px;
+        margin: 50px 0;
+    }
+
+    section.professores .professor-single{
+        width: 78%;
+    }
+
+    /**/
+
+    footer .chamada-footer .texto{
+        width: 62%;
+    }
+
+    footer .chamada-footer .texto h2{
+        font-size: 17px;
+    }
+
+    footer .chamada-footer .texto p{
+        font-size: 12px;
+    }
+
+    footer .chamada-footer .whatsapp{
+        width: 41%;
+    }
+
+    footer .chamada-footer .whatsapp span {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px){
+
+    .modal form,.modal-2 form{
+        width: 80%;
+    }
+
+    section.estude .texto-single > span:nth-child(2) {
+        font-size: 12px;
+    }
+
+    section.estude .container .texto-single h2{
+        font-size: 38px;
+    }
+
+    section.estude p {
+        font-size: 12px;
+    }
+
+    section.estude button{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 16px;
+        padding: 6px 16px;
+    }
+
+    section.estude button img{
+        position: static;
+    }
+
+    /**/
+
+    section.cursos-destaque .container h2 {
+        font-size: 28px;
+    }
+
+    /**/
+
+    section.sobre{
+        margin-top: 15px;
+    }
+
+    /**/
+    
+    section.sobre .parte2 h2{
+        font-size: 22px;
+    }
+
+    section.sobre .parte2 p{
+        font-size: 10px;
+    }
+
+    section.professores .professor-single{
+        width: 88%;
+    }
+}
