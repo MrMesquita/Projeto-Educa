@@ -2,7 +2,7 @@
 
 O projeto educa+ teve o design feito pelo Jhon do canal Futuro dev.
 Assim como todo final de semana, o Jhon faz um projeto no figma e nos manda no seu servidor do discord
-com um desafio, e nessa semana não foi diferente, ese é meu primeiro de muitos desafio semanal que participo.
+com um desafio, e nessa semana não foi diferente, ese é meu primeiro de muitos desafios semanais que participo.
 
   Dicas e desafios que vcs podem cumprir:
   - Faça ser responsivo;
